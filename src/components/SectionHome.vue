@@ -1,0 +1,127 @@
+<script setup></script>
+
+<template>
+  <section>
+    <p class="decoration-curly-brackets">{ }</p>
+    <div>
+      <h3>Hello, my name is <span>Margarida</span> and I'm a</h3>
+      <h1><span>Front-End</span><br />Developer</h1>
+      <div class="buttons-group">
+        <a href="#contacts" class="pink-button">Get in touch</a>
+        <a href="./assets/logo.svg" download class="green-button">Resume Download</a>
+      </div>
+    </div>
+    <p class="decoration-tags">&lt;/&gt;</p>
+  </section>
+</template>
+
+<style lang="scss" scoped>
+section {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1fr;
+  text-align: center;
+  overflow: hidden;
+}
+
+p {
+  font-weight: 500;
+  opacity: 75%;
+  font-size: 5rem;
+}
+
+.decoration-curly-brackets {
+  color: $green;
+  align-self: flex-end;
+}
+
+.decoration-curly-brackets:hover,
+.decoration-tags:hover {
+  animation: tilt-shaking 0.5s ease;
+}
+
+.decoration-tags {
+  color: $pink;
+  align-self: flex-start;
+}
+
+@keyframes tilt-shaking {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(5deg);
+  }
+  50% {
+    transform: rotate(0eg);
+  }
+  75% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+h1 {
+  font-size: 6rem;
+  font-weight: 800;
+  line-height: 125px;
+  letter-spacing: 0.2rem;
+  filter: drop-shadow(15px 10px 12px rgba($shadow-color, 0.5));
+  span {
+    font-weight: 800;
+    background: linear-gradient(90deg, $purple, $pink);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+  }
+}
+
+h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  filter: drop-shadow(15px 10px 12px rgba($shadow-color, 0.25));
+  span {
+    font-weight: 700;
+    font-size: 1.4rem;
+    background: linear-gradient(90deg, $green, $dark-green);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+  }
+}
+
+.buttons-group {
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  margin-block-start: 30px;
+  gap: 25px;
+
+  .pink-button,
+  .green-button {
+    padding: 10px 40px;
+    border-radius: 50px;
+    box-shadow: 0 4px 30px rgba($shadow-color, 0.25);
+  }
+
+  .pink-button {
+    background: linear-gradient(90deg, $pink, $purple);
+  }
+
+  .green-button {
+    background: linear-gradient(90deg, $dark-green, $green);
+    color: $shadow-color;
+  }
+
+  a {
+    color: $white-soft;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+  }
+}
+</style>

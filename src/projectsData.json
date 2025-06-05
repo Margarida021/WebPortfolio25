@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "image": "",
+    "title": "Nina",
+    "description": "Lorem something, Lorem something, Lorem something,Lorem something",
+    "tech": ["React, Tailwind"]
+  },
+  {
+    "id": 2,
+    "image": "",
+    "title": "Violets",
+    "description": "Lorem something, Lorem something, Lorem something,Lorem something",
+    "tech": ["Vue, Sass"]
+  },
+  {
+    "id": 3,
+    "image": "",
+    "title": "Water Me",
+    "description": "Lorem something, Lorem something, Lorem something,Lorem something",
+    "tech": ["Ruby on Rails, Sass"]
+  }
+]
