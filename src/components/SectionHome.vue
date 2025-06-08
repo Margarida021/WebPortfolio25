@@ -2,28 +2,32 @@
 
 <template>
   <section>
-    <p class="decoration-curly-brackets">{ }</p>
-    <div>
-      <h3>Hello, my name is <span>Margarida</span> and I'm a</h3>
-      <h1><span>Front-End</span><br />Developer</h1>
-      <div class="buttons-group">
-        <a href="#contacts" class="pink-button">Get in touch</a>
-        <a href="./assets/logo.svg" download class="green-button">Resume Download</a>
+    <div class="section-container">
+      <span class="decoration-curly-brackets">{ }</span>
+      <div>
+        <h3>Hello, my name is <span>Margarida</span> and I'm a</h3>
+        <h1><span>Front-End</span><br />Developer</h1>
+        <div class="buttons-group">
+          <a href="#contacts" class="pink-button">Get in touch</a>
+          <a href="./assets/logo.svg" download class="green-button"
+            >Resume <i class="fa-solid fa-circle-down"></i
+          ></a>
+        </div>
       </div>
+      <span class="decoration-tags">&lt;/&gt;</span>
     </div>
-    <p class="decoration-tags">&lt;/&gt;</p>
   </section>
 </template>
 
 <style lang="scss" scoped>
-section {
+.section-container {
   display: grid;
   grid-template-columns: 1fr 1.5fr 1fr;
   text-align: center;
-  overflow: hidden;
 }
 
-p {
+.decoration-tags,
+.decoration-curly-brackets {
   font-weight: 500;
   opacity: 75%;
   font-size: 5rem;
@@ -34,8 +38,8 @@ p {
   align-self: flex-end;
 }
 
-.decoration-curly-brackets:hover,
-.decoration-tags:hover {
+.decoration-tags:hover,
+.decoration-curly-brackets:hover {
   animation: tilt-shaking 0.5s ease;
 }
 
@@ -52,7 +56,7 @@ p {
     transform: rotate(5deg);
   }
   50% {
-    transform: rotate(0eg);
+    transform: rotate(0deg);
   }
   75% {
     transform: rotate(-5deg);
@@ -108,12 +112,19 @@ h3 {
   }
 
   .pink-button {
-    background: linear-gradient(90deg, $pink, $purple);
+    background-size: 200% auto;
+    transition: 0.5s;
+    // background: linear-gradient(90deg, $pink, $purple);
+    background-image: linear-gradient(45deg, $pink 0%, $purple 51%, $pink 100%);
   }
 
   .green-button {
     background: linear-gradient(90deg, $dark-green, $green);
     color: $shadow-color;
+  }
+
+  .pink-button:hover {
+    background-position: right center;
   }
 
   a {

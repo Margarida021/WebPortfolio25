@@ -25,16 +25,12 @@ $shadow-color-rgba: 4 1 77;
   font-weight: normal;
 }
 
-* {
-  overflow-x: hidden; /* prevent unwanted scroll */
-}
-
 /* remover algumas fontes ou trocar por semelhantes a Inter
 remover linhas desnecessarias*/
 
 body {
   background-image: radial-gradient(circle 700px, #490075, #39026b, #290362, #180357, #04014d);
-  // background-attachment: fixed;
+  background-attachment: fixed;
   background-repeat: no-repeat;
   min-height: 100vh;
   color: $white-soft;
@@ -58,39 +54,13 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
 }
 
-//perceber o que é que aqui está a criar um overflow que nao me deixa fazer scroll para baixo.
+ul {
+  list-style: none;
+}
 
-// .blobs {
-//   position: fixed; /* fix position relative to viewport */
-//   top: 0;
-//   left: 0;
-//   width: 100vw; /* full viewport width */
-//   height: 100vh; /* full viewport height */
-//   pointer-events: none; /* allow clicks through */
-//   z-index: 0; /* behind main content */
-// }
-// .blob-right-one {
-//   position: absolute;
-//   background-image: url('@/assets/right-blob-one.svg');
-//   width: 350px;
-//   height: 520px;
-//   bottom: -260px;
-//   right: -70px;
-//   background-repeat: no-repeat;
-//   background-size: contain;
-//   opacity: 0.5;
-// }
-
-// .blob-right-two {
-//   position: absolute;
-//   background-image: url('@/assets/right-blob-two.svg');
-//   width: 490px;
-//   height: 590px;
-//   bottom: -250px;
-//   right: -125px;
-//   background-repeat: no-repeat;
-//   background-size: contain;
-//   opacity: 0.5;
-// }
+a {
+  text-decoration: none;
+}

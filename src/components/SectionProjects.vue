@@ -13,8 +13,6 @@ import ProjectCard from './ProjectCard.vue'
     <!-- loop para criar diferentes cards -->
     <div class="cards-container">
       <ProjectCard />
-      <ProjectCard />
-      <ProjectCard />
     </div>
   </section>
 </template>

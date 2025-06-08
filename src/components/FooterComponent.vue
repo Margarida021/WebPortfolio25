@@ -8,23 +8,33 @@
     </div>
     <div class="mouse-scroll-icon"></div>
     <ul>
-      <li>Icon</li>
-      <li>Icon</li>
-      <li>Icon</li>
+      <li><i class="fa-regular fa-envelope"></i></li>
+      <li><i class="fa-brands fa-linkedin-in"></i></li>
+      <li><i class="fa-brands fa-github"></i></li>
     </ul>
   </footer>
 </template>
 
 <style lang="scss" scoped>
+ul {
+  justify-self: end;
+}
+
+li {
+  font-size: 1.5rem;
+}
+
 footer {
   position: sticky;
   bottom: 0;
   z-index: 1;
   text-align: center;
   width: 100%;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  align-items: end;
+  padding-inline: 40px;
+  padding-block-end: 40px;
 }
 
 .line-text-group {
@@ -45,6 +55,7 @@ footer {
   border: 2px solid $white-soft;
   position: relative;
   border-radius: 50px;
+  justify-self: center;
 }
 
 .mouse-scroll-icon::before {

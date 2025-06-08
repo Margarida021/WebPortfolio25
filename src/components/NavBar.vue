@@ -24,8 +24,6 @@ nav {
   box-shadow: 0 4px 30px rgba($shadow-color, 0.25);
   backdrop-filter: blur(7.1px);
   -webkit-backdrop-filter: blur(7.1px);
-  position: sticky;
-  top: 0;
 }
 
 ul {
@@ -35,13 +33,8 @@ ul {
   padding: 0;
 }
 
-li {
-  list-style-type: none;
-}
-
 a {
   color: $white-soft;
-  text-decoration: none;
   font-weight: 600;
   font-size: 1.2rem;
   transition: 0.2s ease;

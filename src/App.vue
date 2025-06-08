@@ -35,20 +35,18 @@ import FooterComponent from './components/FooterComponent.vue'
       }"
     />
   </div>
-  <!-- <div class="sparkles">
-    <span class="sparkle s1"></span>
-    <span class="sparkle s2"></span>
-    <span class="sparkle s3"></span>
-  </div> -->
-  <div class="blobs">
-    <div class="blob-right-one"></div>
-    <div class="blob-right-two"></div>
-  </div>
+
   <header>
     <NavBar />
   </header>
   <main>
-    <SectionHome id="home" />
+    <div class="home-section-container">
+      <div class="blobs" aria-hidden="true" role="presentation">
+        <div class="blob-right-one"></div>
+        <div class="blob-right-two"></div>
+      </div>
+      <SectionHome id="home" />
+    </div>
     <SectionAboutMe id="about" />
     <SectionProjects id="projects" />
     <SectionContacts id="contacts" />
@@ -57,11 +55,54 @@ import FooterComponent from './components/FooterComponent.vue'
 </template>
 
 <style lang="scss">
-@import './assets/stars.scss';
+@import './assets/styles/stars.scss';
+
+.home-section-container {
+  position: relative;
+  min-height: 100vh;
+  overflow-x: clip;
+}
 
 header {
   display: flex;
   justify-self: center;
   margin-block-start: 40px;
+  position: sticky;
+  top: 40px;
+  z-index: 5;
+}
+
+.blobs {
+  position: absolute; /* fix position relative to viewport */
+  top: 0;
+  left: 0;
+  width: 100vw; /* full viewport width */
+  height: 100vh; /* full viewport height */
+  pointer-events: none; /* allow clicks through */
+  z-index: 0; /* behind main content */
+}
+
+.blob-right-one {
+  position: absolute;
+  background-image: url('@/assets/images/right-blob-one.svg');
+  width: 350px;
+  height: 520px;
+  right: calc(-70px);
+  bottom: calc(-260px);
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 0.5;
+}
+
+.blob-right-two {
+  position: absolute;
+  background-image: url('@/assets/images/right-blob-two.svg');
+  width: 490px;
+  height: 590px;
+  right: calc(-125px);
+  bottom: calc(-250px);
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 0.5;
 }
 </style>
